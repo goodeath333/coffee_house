@@ -1,4 +1,56 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: 'Oswald';
+	/*задаем семейство шрифта для всей страницы*/
+}
+
+/*Здесь мы убраем отступы и просветы у всех(*) элементов страницы, чтобы было легче работать. */
+
+.menu {
+	width: 100%;
+	/*выставляем 100% ширины, для шапки.*/
+	height: 110px;
+	/*высота согласно макету*/
+	display: flex;
+	/*так как вложены два блока, превращаем шапку во флекс*/
+	flex-direction: row;
+	/*расспологаем в линию*/
+	justify-content: space-between;
+	/*устанавливаем просвет между вложенными блоками*/
+	align-items: center;
+	/*расспологаем блоки по центру (по вертикальной прямой)*/
+}
+
+
+main {
+	width: 100%;
+	/*так как у всех разная ширина монитора, выставляем 100% ширины, для основного тела страницы.*/
+}
+
+.footer_main {
+	width: 100%;
+}
+
+.logo h1 {
+	display: flex;
+	margin-left: 80px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 36px;
+	text-align: center;
+	color: #000000;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-right: 80px;
+	width: 280px;
+}
+
+.click {
+	display: block;
+
 }

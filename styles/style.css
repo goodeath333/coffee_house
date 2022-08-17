@@ -76,23 +76,20 @@ main {
 
 .home {
 	height: 622px;
-	/* width: 100%; */
+	width: 100%;
 	/*задаем высоту секции*/
 	background-image: url("https://source.unsplash.com/vSuQJKZkt4U/1920x1080");
-	background-size: 1440;
+	background-size: cover;
 	box-sizing: border-box;
 }
 
-/* .cup {
-	height: 100%;
-	width: 100%;
-	/*звдвем высоту и ширину в 100% от родительского блока*/
-box-sizing: border-box;
-/* задаем ширину блока с полями */
-
+.cup {
+	background-image: url("https://source.unsplash.com/vSuQJKZkt4U/1920x1080");
+	background-size: cover;
+	box-sizing: border-box;
 }
 
-*/
+
 /* img {
 	background-size: cover;
 	/*центрируем изображение и полностью закрываем им фон блока*/

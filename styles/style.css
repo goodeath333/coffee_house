@@ -174,7 +174,7 @@ main {
 }
 
 .text {
-	/* display: block; */
+	display: block;
 	/*это строчный элемент. надо превратить его в блок, чтобы использовать флексбокс*/
 	width: 597px;
 	height: 180px;
@@ -185,6 +185,8 @@ main {
 	color: #000000;
 }
 
+/*ниже здесь начинается блог. это самая сложная конструкция на странице. опишу подробнее*/
+
 .blog {
 	height: 711px;
 	width: 100vw;
@@ -193,13 +195,15 @@ main {
 	/*делаем фон серым*/
 }
 
+/*это общая секция, в которая является основным фоном.*/
+
 .gallery {
 	display: flex;
-	/*превратим все элементы во флекс*/
+	/*превращаем раздел во флекс*/
 	height: inherit;
 	width: inherit;
 	/*теперь наш флекс блок унаследовал значения родителя*/
-	justify-content: space-between;
+	justify-content: space-evenly;
 	/*придаем блокам более разряженное значение*/
 	align-items: center;
 	/*выравниваем элементы по центру*/
@@ -209,34 +213,138 @@ main {
 	/*задаем перенос блоков*/
 }
 
+/*весь этот блок остается невидимым, но нужен чтобы правильно рассположить все карточки в галерее. пожтому мы превратили его во флексбокс и разпределили содержимое.*/
+
 .blog_title {
-	width: 100vw;
-	/*так как блоки получили свойство переноситься, зададим для этого блока ширину, равную экрану. тогда этот блок займет все пространство и заставит остальные да перенестись ниже*/
-	align-self: center;
-	/*выравниваем блок по центру*/
-	margin-top: 32px;
-	/*зададим равное пространство согласно макету*/
 	padding-left: 50%;
 	padding-right: 50%;
-	/*чтобы расположить текст в центре, добавим внутренний отстeп равный половине экрана*/
+	/*чтобы расположить текст в центре, добавим внутренний отстeп равный половине экрана. теперь этот блок займет все пространство и заставит остальные да перенестись ниже*/
 	font-style: normal;
 	font-weight: 500;
 	font-size: 36px;
 	text-align: center;
 	color: #000000;
+	/*оформляем текст*/
+	margin-top: 30px;
+	/*центрируем согласно макету*/
 }
+
 
 .card {
 	width: 365px;
 	height: 474px;
+	/*задаем размер согласно макету.*/
+	background-color: #FFFFFF;
+	/*задаем цвет фона*/
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	/*так как у нас внутри карточки присутствуют три элемента, мы также превратим ее во флексбокс, чтобы расспределить сожержимое равномерно. выравниваем согласно макету*/
+	/*также этот контейнер понадобиться нам для создания анимации*/
 }
 
-figure.card_foto {
+.card_name {
+	display: block;
+	align-self: flex-start;
+	margin-left: 20px;
+	/*загловок карточки оказался в середине. чтобы сдвинуть его согласно макету, выравниваем его по началу флексбокса, и задаем отступ согласно макету.*/
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	text-align: center;
+	color: #000000;
+	/*оформляем текст*/
+}
+
+.card_foto {
 	width: 325px;
 	height: 216px;
+	/*задаем размер блока согласно макету.*/
+	box-sizing: border-box;
+	/*убираем границы с размера*/
+	margin-left: auto;
+	margin-right: auto;
+	/*выравниваем в центре*/
+	/*такие теги как </figure> и </figcaption> нужны для создания галереи. если говорить просто - чтобы можно было привязать описание к изображению и сделать его одним целым.*/
+}
+
+.foto {
+	height: 100%;
+	width: 100%;
+	/*чтобы изображение не выходило за пределы блока, зададим ему размер равный 100% от родителя.*/
 }
 
 .card_text {
+	display: inline-block;
 	width: 325px;
 	height: 108px;
+	/*задаем размер блока согласно макету.*/
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	color: #000000;
+	/*оформляем текст*/
+	margin-left: auto;
+	margin-right: auto;
+	/*выравниваем в центре*/
+}
+
+.subs {
+	width: 100vw;
+	height: 337px;
+	background: #817070;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.subs_title {
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 28px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 36px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.subs_form {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.input {
+	width: 300px;
+	height: 55px;
+	background: #817070;
+	border: 3px solid #FFFFFF;
+	margin-bottom: 28px;
+}
+
+input::placeholder {
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.button {
+	align-self: center;
+	width: 129px;
+	height: 55px;
+	background: #FFFFFF;
+	border: 3px solid #FFFFFF;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #817070;
 }

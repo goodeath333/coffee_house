@@ -14,27 +14,30 @@
 </head>
 
 <body>
+	<!-- Раздел Header -->
 	<header class="menu">
+		<!-- LOGO -->
 		<div class="logo">
 			<h1>COFFEE HOUSE</h1>
 		</div>
+		<!-- панель навигации -->
 		<div class="menu_select">
 			<nav class="navigation">
-				<a href="#" class="click">HOME</a>
-				<a href="#" class="click">STORY</a>
-				<a href="#" class="click">BLOG</a>
-				<a href="#" class="click">SUBSCRIBE</a>
+				<a href="#home" class="click">HOME</a>
+				<a href="#story" class="click">STORY</a>
+				<a href="#blog" class="click">BLOG</a>
+				<a href="#subs" class="click">SUBSCRIBE</a>
 			</nav>
 		</div>
 	</header>
 	<main>
-		<section class="home">
+		<section class="home" id="home">
 			<div class="cup">
 				<h2 class="cup_text">TAKE YOUR TIME</h2>
 				<div class="bold_line"></div>
 			</div>
 		</section>
-		<section class="story">
+		<section class="story" id="story">
 			<div class="story_fx">
 				<h2 class="story_title">STORY</h2>
 				<div class="ledy_coffee"></div>
@@ -46,7 +49,7 @@
 					nunc, eget pharetra risus.</p>
 			</div>
 		</section>
-		<section class="blog">
+		<section class="blog" id="blog">
 			<div class="gallery">
 				<h2 class="blog_title">BLOG</h2>
 				<div class="card">
@@ -84,7 +87,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="subs">
+		<section class="subs" id="subs">
 			<form class="subs_form" action="#" method="post" enctype="text/plain">
 				<label class="subs_title" for="mail">SUBSCRIBE</label>
 				<input class="input" type="email" name="his_email" id="mail" placeholder="enter your email" required>
